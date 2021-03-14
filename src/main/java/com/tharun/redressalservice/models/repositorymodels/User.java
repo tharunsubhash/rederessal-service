@@ -1,9 +1,10 @@
-package com.tharun.complaintsservice.models.repositorymodels;
+package com.tharun.redressalservice.models.repositorymodels;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -15,11 +16,11 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Table(name = "usersregistry")
-public class UserRegistry {
+public class User extends SecurityProperties.User {
     @Id
     @Column(name = "UserId")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    public String userId;
+    public int userId;
 
     @Column(name = "UserName")
     public String userName;

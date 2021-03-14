@@ -1,4 +1,4 @@
-package models;
+package com.tharun.redressalservice.models.repositorymodels;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Table(name = "complaintsregistry")
-public class ComplaintsRegistry {
+public class Complaint {
     @Id
     @Column(name = "ComplaintId")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
